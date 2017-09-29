@@ -1,0 +1,432 @@
+{{TopMenu}}
+{{Menu}}
+{{Menu.ReleaseNotes}}
+{{OrigLang|LibreOffice 5.2: Release Notes}}
+[[Category:ReleaseNotes|5.2]]
+
+== About this page ==
+
+{{AboutthispageFinal|ReleaseNotes/5.2|5.2 release}}
+
+== Writer ==
+
+A quick look at some of the new features in LibreOffice Writer 5.2 {{YouTube|id=d3KUZYjWobg|width=600|align=center}}
+
+* New drawing tools were added (that were previously available only in Draw), including Filled Curve/Polygon/Freeform Line, as well as Polygon (45°). {{tdf|89646}} (Gülşah Köse)
+
+* New button added to standard toolbar for showing/hiding track changes toolbar. {{tdf|90187}} (Gülşah Köse)
+[[File:Trackchangesbar.png|500px|center|thumbnail]]
+
+* Curve button became a split button and related with a toolbox including 5 new drawing tools. {{tdf|89646}} {{tdf|90505}} (Gülşah Köse)
+[[File:DrawingbarNewToolboxWriter.png|500px|center|thumbnail|New toolbox on drawing toolbar]]
+
+* Data Sources keyboard shortcut was changed from {{key|F4}} to {{key|Ctrl|Shift|F4}} to unify it with Calc. {{tdf|97906}} (Yousuf Philips)
+
+* Additional tweaks to the menu items in the main menu bar. {{tdf|91781}} (Yousuf Philips)
+
+=== Single Toolbar Mode ===
+* The '''Standard (Single Mode)''' toolbar was created to be used as an single toolbar alternative to the default double toolbar arrangement and it contains the most used function, insert, and formatting operations. It can be activated by enabling {{bc|View|Toolbars|Standard (Single Mode)}} and disabling {{bc|View|Toolbars|Standard}} and {{bc|View|Toolbars|Formatting}}. {{tdf|92218}} (Yousuf Philips)
+[[File:Single_Toolbar_Mode.png|500px|center|thumbnail|Single Toolbar Mode]]
+
+=== Selection Filter in Cross Reference Tab ===
+* Added a "filter" to {{bc|Insert|Fields|More Fields|Cross-references}} tab. Users can type a few characters to narrow the list. {{tdf|32364}} (Akshay Deep) 
+[[File:SelectionFilterUI.png|500px|center|thumbnail|Cross Reference Tab: Selection Filter UI]]
+
+=== Redesigned Bookmark dialog window ===
+* Revamped {{bc|Insert|Bookmark}} dialog window. {{tdf|90855}} (Jakub Trzebiatowski; Yousuf Philips) 
+[[File:Bookmarkwindow.png|500px|center|thumbnail|New Bookmark Dialog Window]]
+* Default bookmark name is taken automatically using "Bookmark N" pattern.
+* Displaying bookmark text, which is what follows, selection or precedes the bookmark.
+
+== Calc ==
+
+A quick look at some of the new features in LibreOffice Calc 5.2 {{YouTube|id=EiVdXdr1Lrs|width=600|align=center}}
+
+* New drawing tools were added (that were previously available only in Draw), including Filled Curve/Polygon/Freeform Line, as well as Polygon (45°). {{tdf|89646}} (Gülşah Köse)
+
+* All of the toolbar conditional formatting buttons have been merged into a single conditional formatting group button. {{tdf|86567}} (Maxim Monastirsky)
+
+* Easy ability to freeze the first column or first row of a sheet through the toolbar or menu {{bc|View|Freeze Cells}}. {{tdf|91013}} (Gülşah Köse; Maxim Monastirsky; Yousuf Philips)
+
+* The button to open the multiline input now has the same size in all systems (was very thin in some environments). {{tdf|99701}} (Samuel Mehrbrodt, CIB)
+
+* Pressing {{key|Shift|Return}} in the multiline input will now insert a new line instead of moving to the previous cell. {{tdf|63994}} (Samuel Mehrbrodt, CIB)
+
+* Cell References keyboard shortcut {{key|Shift|F4}} was removed in favor of {{key|F4}}, but is still available in OpenOffice.org Legacy keybindings. {{tdf|97906}} (Dennis Francis; Yousuf Philips)
+* Column Select keyboard shortcut {{key|Ctrl|Shift|Space}} was replaced with {{key|Ctrl|Space}}. {{tdf|96969}} (Yousuf Philips)
+* Keyboard shortcut {{key|Ctrl|,}} to insert date and {{key|Ctrl|Shift|,}} to insert time is available to various European keyboard layouts. {{tdf|88027}} (Yousuf Philips)
+
+* The '''Standard (Single Mode)''' toolbar was created to be used as an single toolbar alternative to the default double toolbar arrangement and it contains the most used function, insert, and formatting operations. It can be activated by enabling {{bc|View|Toolbars|Standard (Single Mode)}} and disabling {{bc|View|Toolbars|Standard}} and {{bc|View|Toolbars|Formatting}}. {{tdf|92218}} (Yousuf Philips)
+[[File:Calc_single_toolbar.png|500px|center|thumbnail|Single Toolbar Mode]]
+
+* Option to delete border from adjacent cells too in the borders tab of "Format Cells" dialog. {{tdf|34449}} (Dennis Francis)
+[[File:Adjacent_borders.png|500px|center|thumbnail|The new checkbox option to remove border from adjacent cells as well]]
+[[File:Calc remove border 5.2.jpeg|500px|center|thumb|Left - remove border of cells with option is not select, right - option is select]]
+
+* Multiple status-bar functions can be active at the same time. {{tdf|42629}} (Dennis Francis, Dag Wieers)
+[[File:Sumcount.png|500px|center|thumbnail|Status-bar functions Sum and Count are active at the same time]]
+
+* Currency drop-down list attached to currency toolbar icon makes it easy to choose and use desired currency format. {{tdf|82641}} (Mohammed Abdul Azeem; Michael Meeks)
+[[File:Currency_dropdown.png|500px|center|thumbnail|Currency drop-down list]]
+
+* Freeze Rows and Columns button became a split button and added "Freeze First Row" and "Freeze first Column" options in that button. {{tdf|91013}} (Gülşah Köse - Maxim Monastirsky)
+[[File:FreezeColumn.png|500px|center|thumbnail|Freeze first column]]
+
+* Curve button became a split button and related with a toolbox including new 5 drawing tools. {{tdf|90505}} (Gülşah Köse)
+[[File:DrawingbarNewToolbox.png|500px|center|thumbnail|New toolbox on drawing toolbar]]
+
+* Extensive function tooltips. {{tdf|95878}} (Keigo Kawamura)
+[[File:Calc-function-suggestion.png|500px|center|thumbnail|Tooltip describes the function and its arguments]]
+
+=== New spreadsheet functions ===
+
+* '''RAWSUBTRACT''' to subtract numbers without canceling out small roundoff errors. {{tdf|71459}} (Eike Rathke (Red Hat, Inc.))
+** =RAWSUBTRACT(a,b,c) is like =a-b-c, but the '''-''' minus operator cancels out small roundoff errors that are due to the fact that not every decimal number can be exactly represented as a binary floating point number and effectively the operation snaps to zero. RAWSUBTRACT uses the IEEE754 operation the platform/compiler provides. For example, =0.3-0.2-0.1 results in 0, whereas =RAWSUBTRACT(0.3,0.2,0.1) results in 2.77555756156289E-17
+*:''Note:'' Uncheck {{bc|Tools|Options|Calc|Calculate|Limit decimals for general number format}} to get this result.
+** This can be used to compare whether a result exactly matches an expected number, i.e. if =RAWSUBTRACT(result,expected) equals 0.0
+* '''FORECAST.ETS''' a set of forecasting functions that use triple and double exponential smoothing and handle seasonal effects. {{tdf|94635}} (Winfried Donkers)
+** The Holt-Winters algorithms are used. Both Additional and Multiplicative methods are supported for triple exponential smoothing. 
+** The set consists of the functions FORECAST.ETS.ADD*, FORECAST.ETS.MULT, FORECAST.ETS.SEASONALITY*, FORECAST.ETS.PI.ADD*, FORECAST.ETS.PI.MULT, FORECAST.ETS.STAT.ADD* and FORECAST.ETS.STAT.MULT. The functions marked with * are interchangeable with MS Excel2016.
+[[File:Tdf94635-demo.gif|framed|center|Example of forecasted range with prediction intervals for 95% confidence.]]
+* '''CONCAT''' an enhanced version of CONCATENATE, allowing ranges, columns and references as arguments {{tdf|97831}} (Winfried Donkers)
+** The function is compatible with MS Excel 2016 function CONCAT.
+* '''TEXTJOIN''' to concatenate strings with delimeters between the strings. {{tdf|97831}} (Winfried Donkers)
+** TEXTJOIN allows the same string arguments as CONCAT and has a string argument that will be used as delimiter between the strings to be joined.
+** Also, it is possible to opt for empty cells to be skipped.
+** The function is compatible with MS Excel 2016 function TEXTJOIN.
+* '''IFS''' a cascaded IF-function {{tdf|97831}} (Winfried Donkers)
+** IFS works like if A then B else if C then D else if (etc.).
+** The function is compatible with MS Excel 2016 function IFS.
+* '''SWITCH''' a multiple choice selection function {{tdf|97831}} (Winfried Donkers)
+** SWITCH compares one expression with 1 to n possible values and returns the result belonging to the first values that equals expression.
+** The function is compatible with MS Excel 2016 function SWITCH.
+* '''MINIFS''', '''MAXIFS''' {{tdf|97831}} (Winfried Donkers)
+** These statistical functions work like SUMIFS and AVERAGEIFS, but return the minimum respectively maximum value of the resulting range.
+** The functions are compatible with MS Excel 2016 functions MINIFS and MAXIFS.
+
+=== Changed spreadsheet functions ===
+
+* '''WEEKDAY''' handles additional type argument values. {{tdf|100396}} (Eike Rathke (Red Hat, Inc.))
+** For interoperability with other spreadsheet implementations the following new argument values for the second ''Type'' parameter are accepted and let WEEKDAY return numbers from 1 to 7:
+*** '''11''': Monday 1 to Sunday 7
+*** '''12''': Tuesday 1 to Monday 7
+*** '''13''': Wednesday 1 to Tuesday 7
+*** '''14''': Thursday 1 to Wednesday 7
+*** '''15''': Friday 1 to Thursday 7
+*** '''16''': Saturday 1 to Friday 7
+*** '''17''': Sunday 1 to Saturday 7
+** Previous versions accepted all integer values as ''Type'' argument, but any number not 1 or 2 or 3 was handled the same as 3, returning values starting with Monday=0. Now all values not of the set 1,2,3,11,12,13,14,15,16,17 let WEEKDAY return an error.
+
+<!--
+=== Statistical wizard (alternative to supplement package MS Excel analysis) ===
+
+* Statistical wizard in {{bc|Data|Statistics}}
+** …
+-->
+
+=== Support wildcards to be compatible with XLS/XLSX and with ODF 1.2 ===
+
+Simple wildcards as known from other spreadsheet applications can now be used in formula expressions. (Eike Rathke (Red Hat, Inc.))
+
+Wildcards are
+* '''*''' (asterisk) any sequence of characters, including empty sequence
+* '''?''' (question mark) any character, exactly one
+* '''~''' (tilde) escapes the special meaning of the following asterisk, question mark or tilde
+
+See also {{tdf|72196}} and related section in ODF 1.2 [https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part1.html#__RefHeading__1418734_253892949 table:use-wildcards] and OpenFormula [http://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#__RefHeading__1017868_715980110 Host-Defined Behaviors]
+
+Wildcards are supported in all functions that already supported regular expressions, which are: all database functions DAVERAGE, DCOUNT, DCOUNTA, DGET, DMAX, DMIN, DPRODUCT, DSTDEV, DSTDEVP, DSUM, DVAR and DVARP; the functions COUNTIF, COUNTIFS, HLOOKUP, LOOKUP, MATCH, VLOOKUP, SUMIF, SUMIFS, AVERAGEIF, AVERAGEIFS and SEARCH.
+
+Accordingly the setting was changed, under {{bc|Menu|Tools|Options|Calc|Calculate}} there is now a '''Enable wildcards in formulas''' radio button grouped with '''Enable regular expressions in formulas''' and '''No wildcards or regular expressions in formulas'''. When reading ODF spreadsheet documents with ''table:use-wildcards'' enabled or importing Microsoft Excel spreadsheet documents the option is set to wildcards enabled.
+
+=== Using named expressions and ranges with sheet-local scope on other sheets ===
+
+It is now possible to use a defined name with a scope local to a sheet in a formula on any other sheet. {{tdf|96915}} (Eike Rathke (Red Hat, Inc.))
+
+For example, a named range ''LocalName'' defined with scope ''Sheet1'' can be used in a formula on ''Sheet2'' as <code>=SUM(Sheet1.LocalName)</code>, usual sheet name constraints for references apply, e.g. if the sheet name contains a blank it has to be enclosed in single quotes, as in <code>=SUM('Other Sheet'.LocalName)</code>
+
+=== Copying named expressions and ranges while copying sheets ===
+
+While copying entire sheets, named expressions and ranges that point to the copied sheet and are used by any formula cell that is copied along with the sheet are copied to new sheet-local scoped names. {{tdf|75372}} (Eike Rathke (Red Hat, Inc.))
+
+For example, a document with sheet Sheet1 and the defined names
+{| class="wikitable"
+|-
+! Name !! Expression !! Scope
+|-
+| global || $Sheet1.$A$1 || Document (Global)
+|-
+| global_global || global*100 || Document (Global)
+|-
+| global_local || local*1000 || Document (Global)
+|-
+| local || $Sheet1.$A$2 || Sheet1
+|-
+| local_global || global*10000 || Sheet1
+|-
+| local_local || local*100000 || Sheet1
+|}
+and formula cells using the names ''global_global'', ''global_local'', ''local_global'' and ''local_local'', copying Sheet1 to NewSheet will result in the defined names (Manage Names dialog invoked on NewSheet)
+{| class="wikitable"
+|-
+! Name !! Expression !! Scope
+|-
+| global || $Sheet1.$A$1 || Document (Global)
+|-
+| global || $NewSheet.$A$1 || NewSheet
+|-
+| global_global || global*100 || Document (Global)
+|-
+| global_global || global*100 || NewSheet
+|-
+| global_local || Sheet1.local*1000 || Document (Global)
+|-
+| global_local || local*1000 || NewSheet
+|-
+| local || $Sheet1.$A$2 || Sheet1
+|-
+| local || $NewSheet.$A$2 || NewSheet
+|-
+| local_global || global*10000 || Sheet1
+|-
+| local_global || global*10000 || NewSheet
+|-
+| local_local || Sheet1.local*100000 || Sheet1
+|-
+| local_local || local*100000 || NewSheet
+|}
+thus the formulas continue to work and the names point to the copied cells as expected.
+=== Number Format ===
+* Date/Time Formats (Laurent BP)
+** as minute and month have same code <code>M</code>, disambiguation have been improved {{tdf|95339}} {{tdf|101147}}
+
+== Impress & Draw ==
+
+A quick look at some of the new features in LibreOffice Impress 5.2 {{YouTube|id=dpcb8XIXwq0|width=600|align=center}}
+
+* Effects list moved from dialog into the Custom Animation sidebar tab. {{tdf|87813}} (Rishabh Kumar, <abbr title="Google Summer of Code">GSoC</abbr> 2015; Yousuf Philips)
+* Custom Animation list has more details in it that can be seen at a glance. {{tdf|87812}} (Akshay Deep; Yousuf Philips)
+* Speed drop down menus with presets are replaced with comboboxes with editable values. {{tdf|98037}} (Akshay Deep)
+* Additional tweaks to the menu items in the main menu bar. {{tdf|91857}} (Yousuf Philips)
+* Quick access to slide and page properties in a new 'Slide' and 'Page' content panel in the 'Properties' sidebar tab. (see this [https://susobhang70.github.io/sidebar-documentation/libreoffice-background-panel-post blog entry]) {{tdf|89466}} (Rishabh Kumar, <abbr title="Google Summer of Code">GSoC</abbr> 2015; Katarina Behrens, CIB; Susobhan Ghosh, <abbr title="Google Summer of Code">GSoC</abbr> 2016; Yousuf Philips)
+[[File:LO-5.2-Impress-Sidebar-Prop.-Slide.png|300px|center|thumbnail]]
+* Showing/Hiding draw functions with option button can be used in Impress and Draw too. {{tdf|89540}} (Gülşah Köse)
+[[File:Drawfuncbuttondraw.png|500px|center|thumbnail]][[File:Drawfuncbarimpress.png|500px|center|thumbnail]]
+* It is now possible to export to PDF only notes pages. {{tdf|39271}} (David Tardon)
+
+== Base ==
+
+* …
+
+== Chart ==
+* Automatic Y log scale is no more forced to 1 {{tdf|96871}} (Laurent BP)
+* Trend line: improve rendering of polynomial equation (Laurent BP)
+** before <code>f(x) = 2x^2 - x + 1</code>
+** after <code>f(x) = 2x² − x + 1</code>
+* Wrap trend line equation if it is longer than chart width {{tdf|94004}} (Laurent BP)
+<center>
+{|
+|-
+| [[File:WrapTrenLineBefore.PNG|400px|thumbnail|center|Distorded chart (before LibO 5.2)]] 
+| [[File:WrapTrenLineAfter.PNG|400px|thumbnail|center|Wrapped trend line equation to fit in chart width (LibO 5.2)]]
+|}
+</center>
+
+== Math ==
+
+* …
+
+== Core / General ==
+=== Text Layout ===
+* Improve text alignment for vertical text in table. {{tdf|101729}}. (Mark Hung)
+
+=== Document signing ===
+
+* Added support for signature descriptions and signing with the same certificate multiple times. [http://vmiklos.hu/blog/libreoffice-signature-descriptions.html blog entry]. (Miklos Vajna, Collabora)
+[[File:Signing-description.png|500px|center|thumbnail|New signature descriptions]]
+
+* Added support for reading SHA-256 hashes in ODF documents. {{tdf|76142}}. [http://vmiklos.hu/blog/libreoffice-sha256-signatures.html blog entry] (Miklos Vajna, Collabora)
+
+* Added support for OOXML signature import. [http://vmiklos.hu/blog/ooxml-signature-import.html blog entry]. (Miklos Vajna, Collabora)
+
+* Added support for OOXML signature export. [http://vmiklos.hu/blog/ooxml-signature-export.html blog entry]. (Miklos Vajna, Collabora)
+
+=== Classification according to TSCP-standards ===
+
+* In Writer, Calc and Impress there is the tool bar Classification that allows choosing the classification level. 
+* Choosing the classification level will result in an info bar, and in Writer (depending on the level) also in a watermark and a field in the header and footer. All showing the level of classification. Of course the classification is stored in document properties.
+* In the current implementation there are three categories to choose from. The first one (named "Intelectual property" according to [https://www.tscp.org/wp-content/uploads/2013/08/TSCP_BAILSv1.pdf TSCP_BAILSv1]) sets the header/footer and watermark (for certain levels). This is likely to be modfied in future versions.
+* Look for Classification Bar in the local or on line Help [https://help.libreoffice.org/5.2/Writer/Classification_Bar]. Also see this [http://vmiklos.hu/blog/classification-toolbar.html blog entry]. (Miklos Vajna, Collabora)
+
+=== Shortcuts ===
+
+* On Windows, {{key|Alt|F12}} has been assigned to {{bc|Tools|Options}}. {{tdf|98290}} (Yousuf Philips)
+* On macOS, {{key|Cmd|G}} has been assigned to Find Next, {{key|Cmd|:}} to Spellcheck, and {{key|Cmd|Ctrl|F}} to Fullscreen. (Yousuf Philips)
+
+=== Help Contents ===
+
+* Updates in help pages (Adolfo Jayme Barrientos, Stanislav Horáček, Eike Rathke, Maxim Monastirsky, Yousuf Philips, Olivier Hallot)
+
+=== Performance ===
+
+* Improve performance of VCL event dispatch. (David Tardon)
+
+=== Infrastructure ===
+
+* The official TDF builds for Windows and Linux contain a crash reporter with a server based crash analysis. [https://mmohrhard.wordpress.com/2016/06/19/crash-reporting-for-libreoffice/ more info]
+
+== Filters ==
+* Better import of DOCX and RTF linked graphic into LibreOffice Writer {{tdf|59699}} [http://vmiklos.hu/blog/sw-linked-graphic-import.html blog entry] (Miklos Vajna, Collabora)
+* Microsoft Word for DOS files can now be imported, via libwps. (Sean Young)
+* EMF files now display dashed and dotted lines correctly. {{tdf|79679}} (Chris Sherlock)
+* EMF files now import with correct line caps and joins. [https://cgit.freedesktop.org/libreoffice/core/commit/?id=fe3ac0788666294eff66bb999f68e9cce9c3169e commit] (Stephan van den Akker)
+* JPEG files now export the DPI correctly. {{tdf|85761}} (Chris Sherlock)
+* Some improvements done in SVGIO import filter [Insert -> Image]. [http://x1sc0.blogspot.com More Information] (Xisco Faulí)
+
+== GUI ==
+
+A quick look at some of the general new features in LibreOffice 5.2 {{YouTube|id=EshNTl23liY|width=600|align=center}}
+
+* Print to File now available within the list of printers in Print dialog. {{tdf|94097}} (Katarina Behrens, CIB)
+* Video clips, charts and OLE objects will resize proportionately by default. {{tdf|97919}} (Samuel Mehrbrodt, CIB)
+* Improved resizing behavior for images, videos and OLE objects: Dragging a corner will resize proportionately while dragging an edge will resize unproportionately. {{tdf|84953}} (Samuel Mehrbrodt, CIB)
+* Simplification of Character spacing. {{tdf|89953}} (Samuel Mehrbrodt [CIB], Oliver Specht [CIB])
+* "Save as Template" is now available in the Save toolbar button dropdown {{tdf|99926}} (Samuel Mehrbrodt, CIB)
+* Native gtk3 menubar in LibreOffice. [http://caolanm.blogspot.be/2016/02/native-gtk3-menubar-in-libreoffice.html blog post]. (Caolán McNamara, Red Hat)
+* Native gtk3 tooltips, popovers and context menus. [http://caolanm.blogspot.be/2016/02/current-libreoffice-native-gtk3-elements.html blog post]. (Caolán McNamara, Red Hat)
+
+=== Start Center ===
+
+New expert configuration option "RecentDocsThumbnail" to disable thumbnails in the Start Center (Pierre Sauter) {{tdf|74834}}
+
+=== Window ===
+
+* In Windows can switch the Keyboard-Layout per application, it is possible for LibreOffice, now. {{tdf|98924}} (Juergen Funk, CIB)
+
+
+=== Menu ===
+
+*
+
+=== Configuration ===
+
+* The {{bc|Tools|Customize...}} dialog has now a new '''Context Menus''' tab, where it's possible to customize most of context menus. {{tdf|93837}} (Maxim Monastirsky)
+* …
+
+=== Basic Editor ===
+* Tabs in Basic Editor have been moved to an own row to not depend on the scrollbar height (Samuel Mehrbrodt, CIB) {{tdf|96683}}
+
+=== JVM Start Parameters ===
+* Added the possibility to edit existing JVM start parameters. (Akshay Deep) {{tdf|97425}}
+
+=== Revamped Find & Replace Dialog ===
+* Added Find Previous button. {{tdf|98417}} (Akshay Deep; Yousuf Philips)
+* New wide layout for the Find & Replace dialog. {{tdf|98539}} (Akshay Deep; Yousuf Philips)
+[[File:findrepfinal.png|500px|center|thumbnail|Find/Replace Dialog: Condensed]]
+[[File:findrepfinal2.png|500px|center|thumbnail|Find/Replace Dialog: Expanded]]
+
+=== Remote Files Dialog ===
+* Added Icon View and buttons for switching between modes (Szymon Kłos; Yousuf Philips; Heiko Tietze)
+[[File:RemoteFilesIconView.png|500px|center|thumbnail|Remote Files Dialog with icon view]]
+* Google Drive's Two-Factor Authentication (2FA) now supported {{tdf|87938}} (Szymon Kłos)
+[[File:2fa_google_pin_request.png|300px|center|thumbnail|GDrive 2FA: PIN request]]
+
+=== Template Manager ===
+* New user interface for '''Template Manager''' (see this [https://akkidevblog.wordpress.com/2016/07/23/redesigning-the-template-manager/ blog entry]) (Akshay Deep, <abbr title="Google Summer of Code">GSoC</abbr> 2016; Yousuf Philips; Samuel Mehrbrodt)
+[[File:Rnotes1.png|500px|center|thumbnail|Template Manager layout]]
+* Context Menu for non-browse functions
+* Bottom controls for browse functions
+* Search and combobox filters for filtering templates
+
+== Help ==
+
+A huge number of Help pages have been added or updated for new and changed features.
+<br>(In case you find some Help text missing or outdated, it can be added to [https://wiki.documentfoundation.org/QA bugzilla]; please and put "blocks" to issue {{tdf|80430}}. That bug also shows known issues for missing/wrong Help, that need to be resolved.)
+
+== Localization ==
+
+* The accent mark in Calc function names in the Spanish language (e.g. DÍA(), MÁX()) has been removed in version 5.2.3, as alignment to other spreadsheet implementations {{tdf|101981}} (Adolfo Jayme Barrientos, Johnny_M)
+
+=== New languages/locales with locale data ===
+Available as default document language and for locale specific formatting.
+
+* …
+
+=== Additional languages in the language list ===
+Available for text attribution.
+
+* Apatani [apt-IN]. {{tdf|97386}} (Eike Rathke (Red Hat, Inc.))
+* Interlingue Occidental [ie]. {{tdf|96647}} (Eike Rathke (Red Hat, Inc.))
+* English (Mauritius) [en-MU]. {{tdf|99372}} (Eike Rathke (Red Hat, Inc.))
+* French (Mauritius) [fr-MU]. {{tdf|99372}} (Eike Rathke (Red Hat, Inc.))
+
+=== Incorporation of other languages ===
+
+Our goal is to support as many languages as possible. We would like to thank the following people for voluntary translation in LibreOffice and help in preserving their native languages:
+
+* …
+
+=== Improvements to proofing tools and language support ===
+* New thesaurus for Czech language (Jan Holešovský)
+** generated from the [http://slovnik.zcu.cz/ GNU/FDL Czech-English dictionary]
+** provides quite good results, however incorrect synonyms may be included
+** for non-commercial use, also a previous reliable thesaurus can be used (available in [http://extensions.openoffice.org/en/project/czech-dictionary-pack-ceske-slovniky-cs-cz this Apache OpenOffice extension]) 
+* European Portuguese language (pt-PT) proofing tools improvements:
+** 168 new entries for pt-PT autocorrection {{tdf|97439}} (Marco A. G. Pinto, Olivier Hallot, and Raimundo Moura)
+** Spellchecking dictionary updated (Alberto Simões)
+** New thesaurus based on project [http://ontopt.dei.uc.pt/ Onto.pt] (from version 5.2.3) {{tdf|101616}} (Tiago Santos)
+*** 37924 new entries and word class is now displayed.
+
+<div style="background-color:#F7F7F7;box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15), 0px 0px 3px rgba(0, 0, 0, 0.15);padding:0.99em;margin:1em 0px 0px">''If you speak an endangered language and want to help us to achieve our goal of providing free tools for every single person on the Earth, [https://translations.documentfoundation.org please join us].''</div>
+
+== Feature removal / deprecation ==
+
+=== General ===
+* Support for embedding [https://en.wikipedia.org/wiki/NPAPI NPAPI] Plugins (mostly Adobe Flash) in documents has now been removed.
+* [https://en.wikipedia.org/wiki/ActiveX ActiveX] support is considered deprecated and may be removed in the future.  If this change negatively affects your Windows application please email the LibreOffice development list with your use case and plan for moving off of ActiveX.  We specifically want feedback if you use ActiveX to embed LibreOffice components into your application.
+* Support was removed for the undocumented <code>perftune.ini</code> flags <code>FastPipeCommunication</code> ({{commit|f8f87780f5f7be5ff185b0b8b3206d760d9dfed6|commit}}) and <code>QuickstartPreloadConfiguration</code> ({{commit|d3084fb2442b9584b46fba743158c3fe46defa81|commit}}).
+
+=== Impress ===
+
+* The feature to show the Navigator during the presentation has been removed. {{tdf|96414}} (Bryan Quigley)
+* The pointer (pen) button and its command <code>uno:NavigatorPen</code> have been removed from the Navigator. (Bryan Quigley)
+
+== Under the Hood ==
+
+See what changed [[UnderTheHood/5.2|under the hood]].
+
+== API changes ==
+
+=== C++ UNO language binding and URE libraries ===
+
+* Headers generated for UNO structs now contain <code>operator==</code> and <code>operator!=</code> {{commit|0f8ec3036f44b02aa03795ede3052a790134a90d}}
+
+=== UNO API changes ===
+
+* The [http://api.libreoffice.org/docs/idl/ref/servicecom_1_1sun_1_1star_1_1util_1_1PathSubstitution.html PathSubstitution] service now has a substitution for $(username) which is replaced with the currently logged in user. {{tdf|98407}} (Samuel Mehrbrodt, CIB)
+
+* It's now possible to manipulate context menus via the <code>com.sun.star.ui.UIConfigurationManager</code> API, by using URLs like <code>private:resource/popupmenu/menu_name</code>. {{tdf|93837}} (Maxim Monastirsky)
+
+* Users of the <code>com.sun.star.ui.XContextMenuInterceptor</code> API, can now get the resource URL of the currently executing context menu, as the <code>ActionTriggerContainer</code> attribute of the <code>com.sun.star.ui.ContextMenuExecuteEvent</code> struct implements the <code>com.sun.star.container.XNamed</code> interface. (It was implementing it earlier too, but was returning empty string.) {{tdf|93837}} (Maxim Monastirsky)
+
+* The undocumented <code>com.sun.star.ui.dialogs.TabContainerWindow</code> service implementation (with implementation name <code>com.sun.star.comp.framework.TabWindowService</code>) was removed. {{commit|d6d86237b1b438919609988049ac4a152612fee1|commit}}
+
+* The module <code>com.sun.star.plugin</code> and the NPAPI Plugin related interfaces <code>com.sun.star.mozilla.XPluginInstance</code> <code>com.sun.star.mozilla.XPluginInstanceNotifySink</code> <code>com.sun.star.mozilla.XPluginInstancePeer</code><code>com.sun.star.mozilla.XPluginInstanceSyncPeer</code> <code>com.sun.star.mozilla.XPluginWindowPeer</code> were removed {{commit|4c18af27bf95b332ee2006cfc0bbf469fb1a84d4|commit}} {{commit|06726aa39eaeba71701742d28a1a81bd1574f883}}
+
+The following UNO interfaces and services were changed:
+
+* <code>com.sun.star.xml.sax.XFastShapeContextHandler</code> {{commit|6083a8f188e2cd3fe6849e2112a6b06fbf8e1ad3|commit}}
+* <code>com.sun.star.office.XAnnotation</code> {{commit|29b9df16dfbf17bbe9c46cd268849e6bfa97c84d|commit}}
+* <code>com.sun.star.sheet.NameToken</code> {{commit|fac5f2af5190e6da9bedfcdf02426be59ad99166|commit}}
+* <code>com/sun/star/chart2/XRegressionCurveCalculator</code> {{commit|033b2ae8775d1dcf49f798e267761000cc51627c|commit}}
+* <code>com.sun.star.awt.XToolkitExperimental</code> {{commit|5acdf13b21e52e3c26657d063a9b327006bc5494|commit}}
+
+=== Dispatch Commands ===
+
+The <code>.uno:TaskPane</code> command and the underlying TaskPane code have been removed. The command used to show the TaskPane which was used in Impress before it has been superseded by the Sidebar. Legacy extensions using TaskPanes are still supported by the Sidebar. {{commit|7dd77a12713c0557c5826d3541e97ef6120e1d00|commit}} (Samuel Mehrbrodt, CIB)
+
+=== SDK ===
+
+* The <code>regcompare</code> command-line tool in the SDK has been superseded by <code>unoidl-check</code> (running the latter without any arguments prints out usage information).  (It had already been used as a replacement for <code>regcompare</code> inside the LO build environment, as it supports more input formats than merely the old-style binary <code>.rdb</code> format, so this is a move to consolidate on a single tool again.)  {{commit|532b47a650ce5189e1fb759201129d7d1f434133|commit}}
+
+* <code>codemaker</code> generated C++ headers for UNO structs now contain <code>operator==</code> and <code>operator!=</code> {{commit|0f8ec3036f44b02aa03795ede3052a790134a90d|commit}}

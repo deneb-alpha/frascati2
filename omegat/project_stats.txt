@@ -1,0 +1,15 @@
+29/09/17 9.09
+Statistiche del progetto
+
+                 	Segmenti	Parole	Caratteri (senza spazi)	Caratteri (con spazi)	#File	
+Totali:          	     253	  3940	                  25972	                29247	    2	
+Restanti:        	     253	  3940	                  25972	                29247	    2	
+Univoci:         	     243	  3882	                  25606	                28836	    2	
+Univoci restanti:	     243	  3882	                  25606	                28836	    2	
+
+
+Statistiche file singoli:
+
+Nome del file    	Segmenti totali	Segmenti restanti	Segmenti univoci	Segmenti univoci restanti	Parole totali	Parole restanti	Parole univoche	Parole univoche restanti	Caratteri totali (senza spazi)	Caratteri restanti (senza spazi)	Caratteri univoci (senza spazi)	Caratteri univoci restanti (senza spazi)	Caratteri totali (con spazi)	Caratteri restanti (con spazi)	Caratteri univoci (con spazi)	Caratteri univoci restanti (con spazi)	
+5.2.UTF8         	            250	              250	             240	                      240	         3910	           3910	           3852	                    3852	                         25775	                           25775	                          25409	                                   25409	                       29029	                         29029	                        28618	                                 28618	
+ReleaseNotes.UTF8	              3	                3	               3	                        3	           30	             30	             30	                      30	                           197	                             197	                            197	                                     197	                         218	                           218	                          218	                                   218	
