@@ -4,6 +4,14 @@
   <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="3.6.0_4_r9334:9343" segtype="sentence" srclang="EN-GB"/>
   <body>
 <!-- Default translations -->
+    <tu>
+      <tuv lang="EN-GB">
+        <seg>A quick look at some of the new features in LibreOffice Writer 5.2 {{YouTube|id=d3KUZYjWobg|width=600|align=center}}</seg>
+      </tuv>
+      <tuv lang="IT-IT" changeid="Marina Latini" changedate="20170929T090312Z" creationid="Marina Latini" creationdate="20170929T090312Z">
+        <seg>Alcune delle nuove funzionalità di LibreOffice Writer 5.2 {{YouTube|id=d3KUZYjWobg|width=600|align=center}}</seg>
+      </tuv>
+    </tu>
 <!-- Alternative translations -->
   </body>
 </tmx>
